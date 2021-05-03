@@ -26,22 +26,19 @@ A very basic example could look something like this. This example would always d
 
 ```php
 \Underpin\underpin()->admin_notices()->add( 'example-notice', [
-	'class' => 'Underpin_Admin_Notices\Factories\Admin_Notice_Instance',
-	'args'  => [
-		[
-			'name'                    => 'Example notice',
-			'description'             => 'This notice displays all the time.',
-			'type'                    => 'notice',
-			'is_dismissible'          => false,
-			'wrapper_classes'         => ['class-1','class-2'],
-			'id'                      => 'example-notice',
-			'message'                 => 'This will display all the time.',
-			'should_display_callback' => '__return_true',
-		],
-	],
+	'name'                    => 'Example notice',
+	'description'             => 'This notice displays all the time.',
+	'type'                    => 'notice',
+	'is_dismissible'          => false,
+	'wrapper_classes'         => [ 'class-1', 'class-2' ],
+	'id'                      => 'example-notice',
+	'message'                 => 'This will display all the time.',
+	'should_display_callback' => '__return_true',
 ] );
-
 ```
+
+This would display:
+![image](https://user-images.githubusercontent.com/8210827/116904222-469c0f00-abf2-11eb-89e6-5285f63defc3.png)
 
 Alternatively, you can extend `Admin_Notice` and reference the extended class directly, like so:
 

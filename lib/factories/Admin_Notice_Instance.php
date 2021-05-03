@@ -36,19 +36,7 @@ class Admin_Notice_Instance extends Admin_Notice {
 	}
 
 	public function should_display() {
-		if ( is_callable( $this->should_display_callback ) ) {
-			return call_user_func( $this->should_display_callback );
-		}
-
-		return new \WP_Error(
-			'invalid_callback',
-			'The provided should display callback is invalid',
-			[
-				'callback' => $this->should_display_callback,
-				'id'       => $this->id,
-				'stack'    => debug_backtrace(),
-			]
-		);
+		return $this->set_callable( $this->should_display_callback );
 	}
 
 }
