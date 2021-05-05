@@ -15,7 +15,7 @@
   },
   "autoload": {
     "files": [
-      "scripts.php"
+      "admin-notices.php"
     ]
   }
 }
