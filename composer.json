@@ -2,7 +2,7 @@
   "name": "underpin/admin-notice-loader",
   "description": "Admin notice Loader for Underpin",
   "type": "library",
-  "license": "GPL 2.0",
+  "license": "GPL-2.0-or-later",
   "authors": [
     {
       "name": "Alex Standiford",
@@ -10,7 +10,8 @@
     }
   ],
   "require": {
-    "underpin/underpin": "1.2.*"
+    "underpin/underpin": "1.2.*",
+    "underpin/logger-loader": "^1.0"
   },
   "autoload": {
     "files": [
