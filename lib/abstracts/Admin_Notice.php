@@ -145,7 +145,7 @@ abstract class Admin_Notice {
 	 * @inheritDoc
 	 */
 	protected function get_template_root_path() {
-		return UNDERPIN_ADMIN_MENU_ROOT_DIR . 'templates';
+		return UNDERPIN_ADMIN_NOTICES_ROOT_DIR . 'templates';
 	}
 
 }
