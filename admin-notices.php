@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Add this loader.
 add_action( 'underpin/before_setup', function ( $file, $class ) {
-	if ( ! defined( 'UNDERPIN_ADMIN_MENU_ROOT_DIR' ) ) {
+	if ( ! defined( 'UNDERPIN_ADMIN_NOTICES_ROOT_DIR' ) ) {
 		define( 'UNDERPIN_ADMIN_NOTICES_ROOT_DIR', plugin_dir_path( __FILE__ ) );
 	}
 	require_once( UNDERPIN_ADMIN_NOTICES_ROOT_DIR . 'lib/abstracts/Admin_Notice.php' );
