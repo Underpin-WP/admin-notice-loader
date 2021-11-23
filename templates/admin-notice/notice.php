@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! isset( $template ) || ! $template instanceof Underpin_Admin_Notices\Abstracts\Admin_Notice ) {
+if ( ! isset( $template ) || ! $template instanceof Underpin\Admin_Notices\Abstracts\Admin_Notice ) {
 	return;
 }
 
