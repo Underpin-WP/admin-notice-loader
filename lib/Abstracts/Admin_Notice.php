@@ -7,11 +7,11 @@
  */
 
 
-namespace Underpin_Admin_Notices\Abstracts;
+namespace Underpin\Admin_Notices\Abstracts;
 
+use Underpin\Loaders\Logger;
 use Underpin\Traits\Feature_Extension;
 use Underpin\Traits\Templates;
-use function Underpin\underpin;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -60,7 +60,7 @@ abstract class Admin_Notice {
 		$should_display = $this->should_display();
 
 		if ( is_wp_error( $should_display ) ) {
-			underpin()->logger()->log_as_error(
+			Logger::log_as_error(
 				'notice',
 				'underpin_notice_did_not_display',
 				'A notice did not display.',
@@ -73,7 +73,7 @@ abstract class Admin_Notice {
 		$notice = $this->render_notice();
 
 		if ( is_wp_error( $notice ) ) {
-			underpin()->logger()->log_wp_error( 'warning', $notice );
+			Logger::log_wp_error( 'warning', $notice );
 
 			return;
 		}
@@ -145,7 +145,7 @@ abstract class Admin_Notice {
 	 * @inheritDoc
 	 */
 	protected function get_template_root_path() {
-		return UNDERPIN_ADMIN_NOTICES_ROOT_DIR . 'templates';
+		return UNDERPIN_ADMIN_NOTICES_ROOT_DIR . '/templates';
 	}
 
 }

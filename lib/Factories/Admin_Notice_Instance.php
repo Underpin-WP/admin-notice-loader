@@ -7,11 +7,11 @@
  */
 
 
-namespace Underpin_Admin_Notices\Factories;
+namespace Underpin\Admin_Notices\Factories;
 
 
 use Underpin\Traits\Instance_Setter;
-use Underpin_Admin_Notices\Abstracts\Admin_Notice;
+use Underpin\Admin_Notices\Abstracts\Admin_Notice;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
